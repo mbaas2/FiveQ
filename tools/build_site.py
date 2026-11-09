@@ -20,7 +20,7 @@ IMG = DOCS / "img"
 LINKS = {
     "windows_download": "https://github.com/mbaas2/FiveQThoughts/releases/latest",
     "mac_download": "https://github.com/mbaas2/FiveQThoughts/releases/latest",
-    "appstore": "",  # App Store link for FiveQ (iPhone + Apple Watch), once live
+    "testflight": "https://testflight.apple.com/join/Fmn9sSgS",  # FiveQ (iPhone + Apple Watch) beta; use an App Store link here once live
     "repo_desktop": "https://github.com/mbaas2/FiveQThoughts",
     "repo_ios": "https://github.com/mbaas2/FiveQiOS",
     "repo_watch": "https://github.com/mbaas2/FiveQWatch",
@@ -94,12 +94,12 @@ T = {
         "install_mac_note": "Benötigt Python 3.9+ (z. B. über die Xcode Command Line Tools).",
         "install_ios_h3": "📱 iPhone & ⌚ Apple Watch",
         "install_ios": [
-            "FiveQ aus dem App Store laden. Die Watch-App ist optional: Sie kommt automatisch auf die Uhr, wenn in der Watch-App auf dem iPhone „Apps automatisch installieren“ aktiv ist – sonst unter „Verfügbare Apps“ nachinstallieren.",
+            "<strong>TestFlight</strong> aus dem App Store installieren, den Einladungslink unten öffnen und FiveQ installieren. Die Watch-App ist optional: Sie kommt automatisch auf die Uhr, wenn in der Watch-App auf dem iPhone „Apps automatisch installieren“ aktiv ist – sonst unter „Verfügbare Apps“ nachinstallieren.",
             "In den <strong>Einstellungen</strong> den Cloud-Key eintragen – oder am Desktop unter ⚙ API den <strong>QR-Code</strong> scannen.",
             "Falls die Watch-App installiert ist, wird der Key automatisch an die Apple Watch übertragen.",
         ],
         "download": "Download",
-        "appstore": "Im App Store",
+        "testflight": "Per TestFlight laden",
         "soon": "Demnächst verfügbar",
         "support_h2": "Unterstützen",
         "support_text": "FiveQ ist ein privates Projekt und kostenlos. Wenn dir die App gefällt, freue ich mich über einen Kaffee ☕ oder einen Stern auf GitHub.",
@@ -175,12 +175,12 @@ T = {
         "install_mac_note": "Requires Python 3.9+ (e.g. via the Xcode Command Line Tools).",
         "install_ios_h3": "📱 iPhone & ⌚ Apple Watch",
         "install_ios": [
-            "Get FiveQ from the App Store. The Watch app is optional: it is installed on your watch automatically if “Automatically install apps” is on in the Watch app on your iPhone – otherwise add it later under “Available Apps”.",
+            "Install <strong>TestFlight</strong> from the App Store, open the invitation link below and install FiveQ. The Watch app is optional: it is installed on your watch automatically if “Automatically install apps” is on in the Watch app on your iPhone – otherwise add it later under “Available Apps”.",
             "Enter your cloud key in <strong>Settings</strong> – or scan the <strong>QR code</strong> shown on the desktop under ⚙ API.",
             "If the Watch app is installed, the key is transferred to your Apple Watch automatically.",
         ],
         "download": "Download",
-        "appstore": "On the App Store",
+        "testflight": "Get it on TestFlight",
         "soon": "Coming soon",
         "support_h2": "Support",
         "support_text": "FiveQ is a free side project. If you like it, I'd be happy about a coffee ☕ or a star on GitHub.",
@@ -353,7 +353,7 @@ def index(lang):
     <div class="card"><h3>{t["install_keys_h3"]}</h3><ul>{li(t["install_keys"])}</ul></div>
     <div class="card"><h3>{t["install_win_h3"]}</h3><ol>{li(t["install_win"])}</ol><p class="note">{escape(t["install_win_note"])}</p>{button(LINKS["windows_download"], t["download"], True, t)}</div>
     <div class="card"><h3>{t["install_mac_h3"]}</h3><ol>{li(t["install_mac"])}</ol><p class="note">{escape(t["install_mac_note"])}</p>{button(LINKS["mac_download"], t["download"], True, t)}</div>
-    <div class="card"><h3>{t["install_ios_h3"]}</h3><ol>{li(t["install_ios"])}</ol>{button(LINKS["appstore"], t["appstore"], True, t)}</div>
+    <div class="card"><h3>{t["install_ios_h3"]}</h3><ol>{li(t["install_ios"])}</ol>{button(LINKS["testflight"], t["testflight"], True, t)}</div>
   </div>
 </div></section>
 
