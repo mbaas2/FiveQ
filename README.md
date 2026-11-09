@@ -45,9 +45,3 @@ python3 tools/seed_demo.py --lang de --cleanup
 - `capture_ios.sh` nutzt die Debug-Startargumente `-screenshotTab` / `-screenshotAbout` der iOS-App.
 - Windows: siehe [`tools/SCREENSHOTS-WINDOWS.md`](tools/SCREENSHOTS-WINDOWS.md).
 - Apple Watch: `tools/capture_watch.sh <lang> <outdir> <watch-udid> <FiveQWatch.app>` (Debug-Build; der erste Boot des watchOS-Simulators dauert mehrere Minuten, danach ist die Watch anfangs sehr träge – ggf. Bilder verzögert nachholen).
-
-## Offen vor der Veröffentlichung
-
-- Impressum (`docs/de/impressum.html`, Pflichtangaben in `build_site.py`) und Datenschutz prüfen
-- App-Store-Link und Release-Downloads eintragen
-- Windows-Screenshots
