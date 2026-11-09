@@ -217,9 +217,10 @@ def button(url, label, primary=False, t=None):
 def header(t, lang):
     other_code, other_name = t["other"]
     nav = "".join(f'<a class="nav-section" href="{h}">{escape(n)}</a>' for h, n in t["nav"])
+    toggle_label = "Design wechseln (Hell/Dunkel)" if lang == "de" else "Toggle theme (Light/Dark)"
     return f"""<header class="site-header"><div class="wrap">
   <a class="logo" href="./"><span class="bolt">⚡</span> FiveQ</a>
-  <nav class="site-nav">{nav}<a class="lang-switch" href="../{other_code}/" hreflang="{other_code}">{other_name}</a></nav>
+  <nav class="site-nav">{nav}<a class="lang-switch" href="../{other_code}/" hreflang="{other_code}">{other_name}</a><button type="button" class="theme-toggle" id="theme-toggle" title="{toggle_label}" aria-label="{toggle_label}">🌓</button></nav>
 </div></header>"""
 
 
@@ -228,6 +229,44 @@ def footer(t):
   <div>{t["footer_by"]}<br><span class="note">{escape(t["footer_tm"])}</span></div>
   <div><a href="{t["privacy"][0]}">{t["privacy"][1]}</a> · <a href="{t["imprint"][0]}">{t["imprint"][1]}</a> · <a href="{LINKS["repo_desktop"]}">{t["source"]}</a></div>
 </div></footer>"""
+
+
+THEME_SCRIPT = """<script>
+(function() {
+  var root = document.documentElement;
+  var mq = window.matchMedia("(prefers-color-scheme: dark)");
+  function currentTheme() {
+    var saved = localStorage.getItem("fiveq-theme");
+    if (saved === "light" || saved === "dark") return saved;
+    return mq.matches ? "dark" : "light";
+  }
+  function applyTheme(theme) {
+    root.setAttribute("data-theme", theme);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.textContent = theme === "dark" ? "🌙" : "☀️";
+    document.querySelectorAll("picture > source").forEach(function(src) {
+      src.media = theme === "dark" ? "all" : "not all";
+    });
+  }
+  applyTheme(currentTheme());
+  window.addEventListener("DOMContentLoaded", function() {
+    applyTheme(currentTheme());
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.addEventListener("click", function() {
+        var next = currentTheme() === "dark" ? "light" : "dark";
+        localStorage.setItem("fiveq-theme", next);
+        applyTheme(next);
+      });
+    }
+  });
+  if (mq.addEventListener) {
+    mq.addEventListener("change", function() {
+      if (!localStorage.getItem("fiveq-theme")) applyTheme(currentTheme());
+    });
+  }
+})();
+</script>"""
 
 
 def page(t, lang, title, body, desc):
@@ -245,6 +284,7 @@ def page(t, lang, title, body, desc):
 <link rel="alternate" hreflang="{other_code}" href="../{other_code}/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 <link rel="stylesheet" href="../assets/style.css">
+{THEME_SCRIPT}
 </head>
 <body>
 {header(t, lang)}
@@ -288,7 +328,7 @@ def index(lang):
 
   <div class="platform">
     <div class="pl-text"><h3>{t["mac_h3"]}</h3><ul>{li(t["mac_points"])}</ul></div>
-    <div>{img(f"mac-{lang}-dark", t["mac_alt"], t=t)}</div>
+    <div>{img(f"mac-{lang}", t["mac_alt"], t=t)}</div>
   </div>
 
   <div class="platform reverse">

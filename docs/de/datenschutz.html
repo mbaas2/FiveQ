@@ -11,11 +11,47 @@
 <link rel="alternate" hreflang="en" href="../en/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 <link rel="stylesheet" href="../assets/style.css">
+<script>
+(function() {
+  var root = document.documentElement;
+  var mq = window.matchMedia("(prefers-color-scheme: dark)");
+  function currentTheme() {
+    var saved = localStorage.getItem("fiveq-theme");
+    if (saved === "light" || saved === "dark") return saved;
+    return mq.matches ? "dark" : "light";
+  }
+  function applyTheme(theme) {
+    root.setAttribute("data-theme", theme);
+    var btn = document.getElementById("theme-toggle");
+    if (btn) btn.textContent = theme === "dark" ? "🌙" : "☀️";
+    document.querySelectorAll("picture > source").forEach(function(src) {
+      src.media = theme === "dark" ? "all" : "not all";
+    });
+  }
+  applyTheme(currentTheme());
+  window.addEventListener("DOMContentLoaded", function() {
+    applyTheme(currentTheme());
+    var btn = document.getElementById("theme-toggle");
+    if (btn) {
+      btn.addEventListener("click", function() {
+        var next = currentTheme() === "dark" ? "light" : "dark";
+        localStorage.setItem("fiveq-theme", next);
+        applyTheme(next);
+      });
+    }
+  });
+  if (mq.addEventListener) {
+    mq.addEventListener("change", function() {
+      if (!localStorage.getItem("fiveq-theme")) applyTheme(currentTheme());
+    });
+  }
+})();
+</script>
 </head>
 <body>
 <header class="site-header"><div class="wrap">
   <a class="logo" href="./"><span class="bolt">⚡</span> FiveQ</a>
-  <nav class="site-nav"><a class="nav-section" href="#funktionen">Funktionen</a><a class="nav-section" href="#plattformen">Plattformen</a><a class="nav-section" href="#installation">Installation</a><a class="nav-section" href="#unterstuetzen">Unterstützen</a><a class="lang-switch" href="../en/" hreflang="en">English</a></nav>
+  <nav class="site-nav"><a class="nav-section" href="#funktionen">Funktionen</a><a class="nav-section" href="#plattformen">Plattformen</a><a class="nav-section" href="#installation">Installation</a><a class="nav-section" href="#unterstuetzen">Unterstützen</a><a class="lang-switch" href="../en/" hreflang="en">English</a><button type="button" class="theme-toggle" id="theme-toggle" title="Design wechseln (Hell/Dunkel)" aria-label="Design wechseln (Hell/Dunkel)">🌓</button></nav>
 </div></header>
 <main>
 <div class="wrap legal">
