@@ -94,9 +94,9 @@ T = {
         "install_mac_note": "Benötigt Python 3.9+ (z. B. über die Xcode Command Line Tools).",
         "install_ios_h3": "📱 iPhone & ⌚ Apple Watch",
         "install_ios": [
-            "FiveQ aus dem App Store laden – die Watch-App wird automatisch mitinstalliert.",
+            "FiveQ aus dem App Store laden. Die Watch-App ist optional: Sie kommt automatisch auf die Uhr, wenn in der Watch-App auf dem iPhone „Apps automatisch installieren“ aktiv ist – sonst unter „Verfügbare Apps“ nachinstallieren.",
             "In den <strong>Einstellungen</strong> den Cloud-Key eintragen – oder am Desktop unter ⚙ API den <strong>QR-Code</strong> scannen.",
-            "Der Key wird automatisch an die Apple Watch übertragen.",
+            "Falls die Watch-App installiert ist, wird der Key automatisch an die Apple Watch übertragen.",
         ],
         "download": "Download",
         "appstore": "Im App Store",
@@ -175,9 +175,9 @@ T = {
         "install_mac_note": "Requires Python 3.9+ (e.g. via the Xcode Command Line Tools).",
         "install_ios_h3": "📱 iPhone & ⌚ Apple Watch",
         "install_ios": [
-            "Get FiveQ from the App Store – the Watch app is installed automatically.",
+            "Get FiveQ from the App Store. The Watch app is optional: it is installed on your watch automatically if “Automatically install apps” is on in the Watch app on your iPhone – otherwise add it later under “Available Apps”.",
             "Enter your cloud key in <strong>Settings</strong> – or scan the <strong>QR code</strong> shown on the desktop under ⚙ API.",
-            "The key is transferred to your Apple Watch automatically.",
+            "If the Watch app is installed, the key is transferred to your Apple Watch automatically.",
         ],
         "download": "Download",
         "appstore": "On the App Store",
