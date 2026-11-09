@@ -21,6 +21,7 @@ LINKS = {
     "windows_download": "https://github.com/mbaas2/FiveQThoughts/releases/latest",
     "mac_download": "https://github.com/mbaas2/FiveQThoughts/releases/latest",
     "testflight": "https://testflight.apple.com/join/Fmn9sSgS",  # FiveQ (iPhone + Apple Watch) beta; use an App Store link here once live
+    "testflight_app": "https://apps.apple.com/app/testflight/id899247664",
     "repo_desktop": "https://github.com/mbaas2/FiveQThoughts",
     "repo_ios": "https://github.com/mbaas2/FiveQiOS",
     "repo_watch": "https://github.com/mbaas2/FiveQWatch",
@@ -94,7 +95,7 @@ T = {
         "install_mac_note": "Benötigt Python 3.9+ (z. B. über die Xcode Command Line Tools).",
         "install_ios_h3": "📱 iPhone & ⌚ Apple Watch",
         "install_ios": [
-            "<strong>TestFlight</strong> aus dem App Store installieren, den Einladungslink unten öffnen und FiveQ installieren. Die Watch-App ist optional: Sie kommt automatisch auf die Uhr, wenn in der Watch-App auf dem iPhone „Apps automatisch installieren“ aktiv ist – sonst unter „Verfügbare Apps“ nachinstallieren.",
+            "<a href=\"{testflight_app}\"><strong>TestFlight</strong></a> aus dem App Store installieren, den Einladungslink unten öffnen und FiveQ installieren. Die Watch-App ist optional: Sie kommt automatisch auf die Uhr, wenn in der Watch-App auf dem iPhone „Apps automatisch installieren“ aktiv ist – sonst unter „Verfügbare Apps“ nachinstallieren.",
             "In den <strong>Einstellungen</strong> den Cloud-Key eintragen – oder am Desktop unter ⚙ API den <strong>QR-Code</strong> scannen.",
             "Falls die Watch-App installiert ist, wird der Key automatisch an die Apple Watch übertragen.",
         ],
@@ -175,7 +176,7 @@ T = {
         "install_mac_note": "Requires Python 3.9+ (e.g. via the Xcode Command Line Tools).",
         "install_ios_h3": "📱 iPhone & ⌚ Apple Watch",
         "install_ios": [
-            "Install <strong>TestFlight</strong> from the App Store, open the invitation link below and install FiveQ. The Watch app is optional: it is installed on your watch automatically if “Automatically install apps” is on in the Watch app on your iPhone – otherwise add it later under “Available Apps”.",
+            "Install <a href=\"{testflight_app}\"><strong>TestFlight</strong></a> from the App Store, open the invitation link below and install FiveQ. The Watch app is optional: it is installed on your watch automatically if “Automatically install apps” is on in the Watch app on your iPhone – otherwise add it later under “Available Apps”.",
             "Enter your cloud key in <strong>Settings</strong> – or scan the <strong>QR code</strong> shown on the desktop under ⚙ API.",
             "If the Watch app is installed, the key is transferred to your Apple Watch automatically.",
         ],
