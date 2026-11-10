@@ -45,3 +45,7 @@ python3 tools/seed_demo.py --lang de --cleanup
 - `capture_ios.sh` nutzt die Debug-Startargumente `-screenshotTab` / `-screenshotAbout` der iOS-App.
 - Windows: siehe [`tools/SCREENSHOTS-WINDOWS.md`](tools/SCREENSHOTS-WINDOWS.md).
 - Apple Watch: `tools/capture_watch.sh <lang> <outdir> <watch-udid> <FiveQWatch.app>` (Debug-Build; der erste Boot des watchOS-Simulators dauert mehrere Minuten, danach ist die Watch anfangs sehr träge – ggf. Bilder verzögert nachholen).
+
+## Lizenz / License
+
+- 📄 Lizenz / License: [Apache 2.0 + Commons Clause](LICENSE) (Nutzung privat & gewerblich frei; kommerzielle Verwertung des Codes in eigenen Produkten erfordert eine Lizenz / free for personal & business use; selling or embedding the code in commercial products requires a commercial license)
