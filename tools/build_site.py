@@ -279,6 +279,10 @@ THEME_SCRIPT = """<script>
 </script>"""
 
 
+ANALYTICS = """<script data-goatcounter="https://mbaas.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>"""
+
+
 def page(t, lang, title, body, desc):
     other_code = t["other"][0]
     return f"""<!doctype html>
@@ -295,6 +299,7 @@ def page(t, lang, title, body, desc):
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 <link rel="stylesheet" href="../assets/style.css">
 {THEME_SCRIPT}
+{ANALYTICS}
 </head>
 <body>
 {header(t, lang)}
@@ -397,7 +402,9 @@ E-Mail: <a href="mailto:info@dls-software.de">info@dls-software.de</a> · Tel.: 
 
 <h2>3. Bereitstellung dieser Website (GitHub Pages)</h2>
 <p>Diese Website wird über <strong>GitHub Pages</strong> gehostet, einen Dienst der GitHub Inc., 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, USA (bzw. GitHub B.V., Vijzelstraat 68–72, 1017 HL Amsterdam, Niederlande).</p>
-<p>Beim Aufruf dieser Website übermittelt Ihr Browser technisch notwendige Zugriffsdaten (insbesondere IP-Adresse, Datum und Uhrzeit des Abrufs, aufgerufene URL, Referrer-URL sowie Browser-/Betriebssystem-Informationen) an die Server von GitHub, um die Seiten auszuliefern und die Sicherheit des Betriebs zu gewährleisten (Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO – berechtigtes Interesse an einer sicheren und zuverlässigen Bereitstellung). Wir selbst haben keinen Zugriff auf diese Server-Logfiles, setzen keine Cookies ein und binden keine externen Analyse- oder Tracking-Dienste ein. Weitere Informationen finden Sie in der <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement">Datenschutzerklärung von GitHub</a>.</p>
+<p>Beim Aufruf dieser Website übermittelt Ihr Browser technisch notwendige Zugriffsdaten (insbesondere IP-Adresse, Datum und Uhrzeit des Abrufs, aufgerufene URL, Referrer-URL sowie Browser-/Betriebssystem-Informationen) an die Server von GitHub, um die Seiten auszuliefern und die Sicherheit des Betriebs zu gewährleisten (Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO – berechtigtes Interesse an einer sicheren und zuverlässigen Bereitstellung). Wir selbst haben keinen Zugriff auf diese Server-Logfiles, setzen keine Cookies ein. Weitere Informationen finden Sie in der <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement">Datenschutzerklärung von GitHub</a>.</p>
+<h3>Reichweitenmessung (GoatCounter)</h3>
+<p>Diese Website nutzt <strong>GoatCounter</strong>, einen datensparsamen Dienst zur Reichweitenmessung. GoatCounter setzt <strong>keine Cookies</strong> und speichert keine personenbezogenen Daten: Es werden nur aggregierte Statistiken (z.&nbsp;B. Anzahl der Aufrufe je Seite, verwendete Browser, Herkunfts-Website) gespeichert, aus denen sich einzelne Besucher nicht identifizieren lassen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der statistischen Auswertung der Nutzung). Weitere Informationen: <a href="https://www.goatcounter.com/help/gdpr">goatcounter.com/help/gdpr</a>.</p>
 
 <h2>4. Welche Daten verarbeiten die Apps (FiveQ &amp; FiveQThoughts)?</h2>
 <ul>
@@ -430,7 +437,9 @@ Email: <a href="mailto:info@dls-software.de">info@dls-software.de</a> · Phone: 
 
 <h2>3. Website hosting (GitHub Pages)</h2>
 <p>This website is hosted on <strong>GitHub Pages</strong>, a service provided by GitHub Inc., 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, USA (or GitHub B.V., Vijzelstraat 68–72, 1017 HL Amsterdam, Netherlands).</p>
-<p>When you visit this website, your browser automatically transmits technically required access data (such as IP address, date and time of access, requested URL, referrer URL and browser/OS information) to GitHub's servers to deliver the site and ensure operational security (legal basis: Art. 6(1)(f) GDPR – legitimate interest). We do not have access to these server logs, set no cookies and use no analytics or tracking services on this website. For details, see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's Privacy Statement</a>.</p>
+<p>When you visit this website, your browser automatically transmits technically required access data (such as IP address, date and time of access, requested URL, referrer URL and browser/OS information) to GitHub's servers to deliver the site and ensure operational security (legal basis: Art. 6(1)(f) GDPR – legitimate interest). We do not have access to these server logs, set no cookies. For details, see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's Privacy Statement</a>.</p>
+<h3>Audience measurement (GoatCounter)</h3>
+<p>This website uses <strong>GoatCounter</strong>, a privacy-friendly analytics service. GoatCounter sets <strong>no cookies</strong> and stores no personal data: only aggregated statistics (e.g. number of views per page, browsers used, referring website) are stored, from which individual visitors cannot be identified. Legal basis is Art. 6(1)(f) GDPR (legitimate interest in statistically evaluating usage). More information: <a href="https://www.goatcounter.com/help/gdpr">goatcounter.com/help/gdpr</a>.</p>
 
 <h2>4. What data do the apps (FiveQ &amp; FiveQThoughts) process?</h2>
 <ul>
