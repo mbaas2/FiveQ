@@ -369,50 +369,96 @@ def index(lang):
 PRIVACY = {
     "de": ("Datenschutzerklärung – FiveQ", """
 <h1>Datenschutzerklärung</h1>
-<p class="note">Stand: November 2026 · <span class="todo">Entwurf – bitte vor Veröffentlichung prüfen</span></p>
-<h2>Kurz gesagt</h2>
-<p>FiveQ (iPhone, Apple Watch) und FiveQThoughts (Mac, Windows) erheben keine Daten für uns. Es gibt kein Tracking, keine Analyse-Tools, keine Werbung und keine eigenen Server.</p>
-<h2>Welche Daten verarbeitet die App?</h2>
+<p class="note">Stand: November 2026</p>
+
+<h2>1. Verantwortlicher</h2>
+<p>Verantwortlicher im Sinne der DSGVO:<br>
+DLS Software &amp; Beratung GmbH · Michael Baas<br>
+Kinzigstraße 10a<br>
+63584 Gründau, Deutschland<br>
+E-Mail: <a href="mailto:info@dls-software.de">info@dls-software.de</a> · Tel.: +49 (0)160 5887507</p>
+
+<h2>2. Kurz gesagt</h2>
+<p>FiveQ (iPhone, Apple Watch) und FiveQThoughts (Mac, Windows) erheben keine personenbezogenen Daten für uns. Es gibt kein Tracking, keine Analyse-Tools (auch kein Umami), keine Cookies, keine Werbung und keine eigenen Backend-Server.</p>
+
+<h2>3. Bereitstellung dieser Website (GitHub Pages)</h2>
+<p>Diese Website wird über <strong>GitHub Pages</strong> gehostet, einen Dienst der GitHub Inc., 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, USA (bzw. GitHub B.V., Vijzelstraat 68–72, 1017 HL Amsterdam, Niederlande).</p>
+<p>Beim Aufruf dieser Website übermittelt Ihr Browser technisch notwendige Zugriffsdaten (insbesondere IP-Adresse, Datum und Uhrzeit des Abrufs, aufgerufene URL, Referrer-URL sowie Browser-/Betriebssystem-Informationen) an die Server von GitHub, um die Seiten auszuliefern und die Sicherheit des Betriebs zu gewährleisten (Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO – berechtigtes Interesse an einer sicheren und zuverlässigen Bereitstellung). Wir selbst haben keinen Zugriff auf diese Server-Logfiles, setzen keine Cookies ein und binden keine externen Analyse- oder Tracking-Dienste ein. Weitere Informationen finden Sie in der <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement">Datenschutzerklärung von GitHub</a>.</p>
+
+<h2>4. Welche Daten verarbeiten die Apps (FiveQ &amp; FiveQThoughts)?</h2>
 <ul>
-<li><strong>API-Schlüssel:</strong> Dein TheBrain-API-Key wird ausschließlich lokal auf deinem Gerät gespeichert (iPhone/Watch: App-Einstellungen; Desktop: lokale Konfigurationsdatei).</li>
-<li><strong>Quick Thoughts:</strong> Texte, Links und Bilder, die du anlegst oder ansiehst, werden direkt zwischen deinem Gerät und TheBrain übertragen – entweder an die lokale TheBrain-Desktop-App (<code>localhost</code>) oder an die TheBrain Cloud (<code>api.bra.in</code>). Für die Verarbeitung dort gilt die Datenschutzerklärung von TheBrain Technologies.</li>
-<li><strong>Spracheingabe:</strong> Diktate werden über die Spracherkennung von Apple verarbeitet (siehe Datenschutzhinweise von Apple).</li>
-<li><strong>Apple Watch:</strong> Der API-Key wird vom iPhone über die Apple-WatchConnectivity-Verbindung an deine Uhr übertragen.</li>
+<li><strong>API-Schlüssel:</strong> Ihr TheBrain-API-Key wird ausschließlich lokal auf Ihrem Gerät gespeichert (iPhone/Apple Watch: geschützte App-Einstellungen; Desktop: lokale Konfigurationsdatei).</li>
+<li><strong>Quick Thoughts:</strong> Texte, Links und Bilder, die Sie anlegen, bearbeiten oder ansehen, werden direkt zwischen Ihrem Gerät und TheBrain übertragen – entweder an Ihre lokale TheBrain-Desktop-App (<code>localhost</code>) oder an die TheBrain Cloud (<code>api.bra.in</code>). Für die Verarbeitung dort gilt die Datenschutzerklärung von TheBrain Technologies LP.</li>
+<li><strong>Spracheingabe:</strong> Diktate auf iPhone und Apple Watch werden über die System-Spracherkennung von Apple verarbeitet (siehe Datenschutzhinweise von Apple).</li>
+<li><strong>Apple Watch:</strong> Der API-Key wird direkt von Ihrem iPhone über Apples verschlüsselte <code>WatchConnectivity</code>-Verbindung an Ihre gekoppelte Apple Watch übertragen.</li>
 </ul>
-<h2>Diese Website</h2>
-<p>Diese Seite wird über GitHub Pages bereitgestellt. GitHub kann dabei technisch notwendige Zugriffsdaten (z. B. IP-Adresse) verarbeiten; siehe die Datenschutzerklärung von GitHub. Wir setzen keine Cookies und keine Analyse-Tools ein.</p>
-<h2>Kontakt</h2>
-<p>Verantwortlich: Michael Baas, DLS Software &amp; Beratung GmbH – Kontaktdaten siehe <a href="impressum.html">Impressum</a>.</p>
+
+<h2>5. Kontaktaufnahme per E-Mail</h2>
+<p>Wenn Sie uns per E-Mail kontaktieren, werden die von Ihnen übermittelten Angaben (Name, E-Mail-Adresse, Nachrichteninhalt) ausschließlich zur Bearbeitung Ihrer Anfrage verarbeitet (Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO). Eine Weitergabe an Dritte findet nicht statt; die Daten werden nach Abschluss der Bearbeitung gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.</p>
+
+<h2>6. Ihre Rechte</h2>
+<p>Sie haben gegenüber uns folgende Rechte hinsichtlich Ihrer personenbezogenen Daten: Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16 DSGVO), Löschung (Art. 17 DSGVO), Einschränkung der Verarbeitung (Art. 18 DSGVO), Widerspruch gegen die Verarbeitung (Art. 21 DSGVO) sowie Datenübertragbarkeit (Art. 20 DSGVO). Wenden Sie sich hierzu bitte an <a href="mailto:info@dls-software.de">info@dls-software.de</a>.</p>
+<p>Sie haben außerdem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren. Zuständige Aufsichtsbehörde in Hessen ist der <a href="https://datenschutz.hessen.de">Hessische Beauftragte für Datenschutz und Informationsfreiheit</a>.</p>
 """),
     "en": ("Privacy Policy – FiveQ", """
 <h1>Privacy Policy</h1>
-<p class="note">Last updated: November 2026 · <span class="todo">Draft – please review before publishing</span></p>
-<h2>In short</h2>
-<p>FiveQ (iPhone, Apple Watch) and FiveQThoughts (Mac, Windows) do not collect any data for us. There is no tracking, no analytics, no advertising and no server of our own.</p>
-<h2>What data does the app process?</h2>
+<p class="note">Last updated: November 2026</p>
+
+<h2>1. Controller</h2>
+<p>Controller within the meaning of the GDPR:<br>
+DLS Software &amp; Beratung GmbH · Michael Baas<br>
+Kinzigstraße 10a<br>
+63584 Gründau, Germany<br>
+Email: <a href="mailto:info@dls-software.de">info@dls-software.de</a> · Phone: +49 (0)160 5887507</p>
+
+<h2>2. In short</h2>
+<p>FiveQ (iPhone, Apple Watch) and FiveQThoughts (Mac, Windows) do not collect any personal data for us. There is no tracking, no analytics, no cookies, no advertising and no backend server of our own.</p>
+
+<h2>3. Website hosting (GitHub Pages)</h2>
+<p>This website is hosted on <strong>GitHub Pages</strong>, a service provided by GitHub Inc., 88 Colin P. Kelly Jr. St., San Francisco, CA 94107, USA (or GitHub B.V., Vijzelstraat 68–72, 1017 HL Amsterdam, Netherlands).</p>
+<p>When you visit this website, your browser automatically transmits technically required access data (such as IP address, date and time of access, requested URL, referrer URL and browser/OS information) to GitHub's servers to deliver the site and ensure operational security (legal basis: Art. 6(1)(f) GDPR – legitimate interest). We do not have access to these server logs, set no cookies and use no analytics or tracking services on this website. For details, see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's Privacy Statement</a>.</p>
+
+<h2>4. What data do the apps (FiveQ &amp; FiveQThoughts) process?</h2>
 <ul>
-<li><strong>API key:</strong> Your TheBrain API key is stored only locally on your device (iPhone/Watch: app settings; desktop: local configuration file).</li>
-<li><strong>Quick Thoughts:</strong> Text, links and images you create or view are transferred directly between your device and TheBrain – either the local TheBrain desktop app (<code>localhost</code>) or TheBrain Cloud (<code>api.bra.in</code>). TheBrain Technologies' privacy policy applies to processing there.</li>
-<li><strong>Dictation:</strong> Dictation is processed by Apple's speech recognition (see Apple's privacy information).</li>
-<li><strong>Apple Watch:</strong> The API key is sent from your iPhone to your watch via Apple's WatchConnectivity.</li>
+<li><strong>API key:</strong> Your TheBrain API key is stored exclusively locally on your device (iPhone/Apple Watch: app settings; desktop: local configuration file).</li>
+<li><strong>Quick Thoughts:</strong> Text, links and images you create, edit or view are transferred directly between your device and TheBrain – either your local TheBrain desktop app (<code>localhost</code>) or TheBrain Cloud (<code>api.bra.in</code>). TheBrain Technologies LP's privacy policy applies to processing there.</li>
+<li><strong>Dictation:</strong> Dictation on iPhone and Apple Watch is processed by Apple's system speech recognition (see Apple's privacy information).</li>
+<li><strong>Apple Watch:</strong> The API key is transferred directly from your iPhone to your paired Apple Watch via Apple's WatchConnectivity.</li>
 </ul>
-<h2>This website</h2>
-<p>This site is hosted on GitHub Pages. GitHub may process technically necessary access data (e.g. IP address); see GitHub's privacy statement. We use no cookies and no analytics.</p>
-<h2>Contact</h2>
-<p>Responsible: Michael Baas, DLS Software &amp; Beratung GmbH – see the <a href="../de/impressum.html">imprint</a> for contact details.</p>
+
+<h2>5. Contact by email</h2>
+<p>If you contact us by email, the data you provide (name, email address, message content) will be processed solely to handle your inquiry (Art. 6(1)(b) and (f) GDPR). It will not be shared with third parties and will be deleted once your inquiry has been resolved, unless statutory retention obligations apply.</p>
+
+<h2>6. Your rights</h2>
+<p>Under the GDPR, you have the right of access (Art. 15), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), objection (Art. 21) and data portability (Art. 20). To exercise these rights, please contact <a href="mailto:info@dls-software.de">info@dls-software.de</a>. You also have the right to lodge a complaint with a supervisory authority (in Hesse: <a href="https://datenschutz.hessen.de">Hessischer Beauftragter für Datenschutz und Informationsfreiheit</a>).</p>
 """),
 }
 
 IMPRINT_DE = ("Impressum – FiveQ", """
 <h1>Impressum</h1>
-<p><span class="todo">TODO: Pflichtangaben nach § 5 DDG ergänzen</span></p>
-<p>DLS Software &amp; Beratung GmbH<br>
-<span class="todo">Straße Hausnummer</span><br>
-<span class="todo">PLZ Ort</span></p>
-<p>Vertreten durch: <span class="todo">Geschäftsführer</span><br>
-Registergericht: <span class="todo">…</span>, Registernummer: <span class="todo">HRB …</span><br>
-USt-IdNr.: <span class="todo">DE…</span></p>
-<p>E-Mail: <span class="todo">kontakt@…</span></p>
+<h2>Angaben gemäß § 5 DDG</h2>
+<p>Michael Baas<br>
+DLS Software &amp; Beratung GmbH<br>
+Kinzigstraße 10a<br>
+63584 Gründau<br>
+Deutschland</p>
+
+<h2>Kontakt</h2>
+<p>E-Mail: <a href="mailto:info@dls-software.de">info@dls-software.de</a><br>
+Telefon: +49 (0)160 5887507</p>
+
+<h2>Umsatzsteuer-Identifikationsnummer</h2>
+<p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br>
+DE273774390</p>
+
+<h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+<p>Michael Baas<br>
+Kinzigstraße 10a<br>
+63584 Gründau<br>
+Deutschland</p>
+
+<h2>Haftung für Links</h2>
+<p>Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
 """)
 
 
