@@ -27,7 +27,10 @@ LINKS = {
     "repo_watch": "https://github.com/mbaas2/FiveQWatch",
     "coffee": "https://buymeacoffee.com/mbaas",
     "sponsors": "https://github.com/sponsors/mbaas2",
+    "thebrain": "https://www.thebrain.com",
     "thebrain_keys": "https://app.thebrain.com/api-keys",
+    "issues": "https://github.com/mbaas2/FiveQThoughts/issues",
+    "email": "mailto:FiveQ@mail.mbaas.de",
 }
 
 T = {
@@ -77,7 +80,7 @@ T = {
         "install_keys_h3": "🔑 API-Key besorgen",
         "install_keys": [
             "<strong>Cloud-Key</strong> (für iPhone, Watch und Desktop-Fallback): auf <a href=\"{thebrain_keys}\">app.thebrain.com/api-keys</a> erstellen.",
-            "<strong>Lokaler Key</strong> (optional, Desktop): in TheBrain unter <em>Settings → User → Local API</em>.",
+            "<strong>Lokaler Key</strong> (optional, Desktop): in <a href=\"{thebrain}\">TheBrain</a> unter <em>Settings → User → Local API</em>.",
         ],
         "install_win_h3": "🪟 Windows",
         "install_win": [
@@ -102,10 +105,13 @@ T = {
         "download": "Download",
         "testflight": "Per TestFlight laden",
         "soon": "Demnächst verfügbar",
-        "support_h2": "Unterstützen",
+        "support_h2": "Unterstützen & Kontakt",
         "support_text": "FiveQ ist ein privates Projekt und kostenlos. Wenn dir die App gefällt, freue ich mich über einen Kaffee ☕ oder einen Stern auf GitHub.",
+        "contact_text": "Hast du Feature-Wünsche, Feedback oder möchtest neue Projekte besprechen? Schreib mir gern an <a href=\"mailto:FiveQ@mail.mbaas.de\">FiveQ@mail.mbaas.de</a> oder nutze die <a href=\"https://github.com/mbaas2/FiveQThoughts/issues\">GitHub Issues</a>.",
         "coffee": "☕ Buy me a coffee",
         "sponsors": "💙 GitHub Sponsors",
+        "email_btn": "✉️ FiveQ@mail.mbaas.de",
+        "issues_btn": "💬 GitHub Issues",
         "footer_by": "Ein Projekt von Michael Baas · DLS Software &amp; Beratung GmbH",
         "footer_tm": "TheBrain ist eine Marke von TheBrain Technologies LP. FiveQ ist ein unabhängiges Projekt und steht in keiner Verbindung zu TheBrain Technologies.",
         "privacy": ("datenschutz.html", "Datenschutz"),
@@ -158,7 +164,7 @@ T = {
         "install_keys_h3": "🔑 Get an API key",
         "install_keys": [
             "<strong>Cloud key</strong> (for iPhone, Watch and desktop fallback): create one at <a href=\"{thebrain_keys}\">app.thebrain.com/api-keys</a>.",
-            "<strong>Local key</strong> (optional, desktop): in TheBrain under <em>Settings → User → Local API</em>.",
+            "<strong>Local key</strong> (optional, desktop): in <a href=\"{thebrain}\">TheBrain</a> under <em>Settings → User → Local API</em>.",
         ],
         "install_win_h3": "🪟 Windows",
         "install_win": [
@@ -183,10 +189,13 @@ T = {
         "download": "Download",
         "testflight": "Get it on TestFlight",
         "soon": "Coming soon",
-        "support_h2": "Support",
+        "support_h2": "Support & Contact",
         "support_text": "FiveQ is a free side project. If you like it, I'd be happy about a coffee ☕ or a star on GitHub.",
+        "contact_text": "Have feature requests, feedback, or want to discuss new projects? Feel free to reach out at <a href=\"mailto:FiveQ@mail.mbaas.de\">FiveQ@mail.mbaas.de</a> or open a ticket in <a href=\"https://github.com/mbaas2/FiveQThoughts/issues\">GitHub Issues</a>.",
         "coffee": "☕ Buy me a coffee",
         "sponsors": "💙 GitHub Sponsors",
+        "email_btn": "✉️ FiveQ@mail.mbaas.de",
+        "issues_btn": "💬 GitHub Issues",
         "footer_by": "A project by Michael Baas · DLS Software &amp; Beratung GmbH",
         "footer_tm": "TheBrain is a trademark of TheBrain Technologies LP. FiveQ is an independent project and is not affiliated with TheBrain Technologies.",
         "privacy": ("privacy.html", "Privacy"),
@@ -227,7 +236,7 @@ def header(t, lang):
 
 def footer(t):
     return f"""<footer><div class="wrap">
-  <div>{t["footer_by"]}<br><span class="note">{escape(t["footer_tm"])}</span></div>
+  <div>{t["footer_by"]}<br><span class="note">{link_tb(t["footer_tm"])}</span></div>
   <div><a href="{t["privacy"][0]}">{t["privacy"][1]}</a> · <a href="{t["imprint"][0]}">{t["imprint"][1]}</a> · <a href="{LINKS["repo_desktop"]}">{t["source"]}</a></div>
 </div></footer>"""
 
@@ -298,6 +307,9 @@ def page(t, lang, title, body, desc):
 """
 
 
+def link_tb(s):
+    return escape(s).replace("TheBrain", '<a href="https://www.thebrain.com">TheBrain</a>')
+
 def li(items):
     return "".join(f"<li>{i.format(**LINKS)}</li>" for i in items)
 
@@ -306,14 +318,14 @@ def index(lang):
     t = T[lang]
     ids = t["ids"]
     features = "".join(
-        f'<div class="feature"><div class="ico">{i}</div><h3>{escape(h)}</h3><p>{escape(p)}</p></div>'
+        f'<div class="feature"><div class="ico">{i}</div><h3>{escape(h)}</h3><p>{link_tb(p)}</p></div>'
         for i, h, p in t["features"]
     )
     badges = "".join(f'<span class="badge">{escape(b)}</span>' for b in t["badges"])
     body = f"""
 <div class="hero"><div class="wrap">
   <h1>{t["hero_h1"]}</h1>
-  <p class="lead">{escape(t["hero_lead"])}</p>
+  <p class="lead">{link_tb(t["hero_lead"])}</p>
   <div class="badges">{badges}</div>
   <div class="cta"><a class="btn primary" href="#{ids["install"]}">{t["cta_install"]}</a><a class="btn" href="#{ids["features"]}">{t["cta_features"]}</a></div>
   <div class="hero-shot">{img(f"mac-{lang}", t["hero_alt"], t=t)}</div>
@@ -349,7 +361,7 @@ def index(lang):
 </div></section>
 
 <section id="{ids["install"]}"><div class="wrap">
-  <h2>{t["install_h2"]}</h2><p class="sub">{escape(t["install_sub"])}</p>
+  <h2>{t["install_h2"]}</h2><p class="sub">{link_tb(t["install_sub"])}</p>
   <div class="install">
     <div class="card"><h3>{t["install_keys_h3"]}</h3><ul>{li(t["install_keys"])}</ul></div>
     <div class="card"><h3>{t["install_win_h3"]}</h3><ol>{li(t["install_win"])}</ol><p class="note">{escape(t["install_win_note"])}</p>{button(LINKS["windows_download"], t["download"], True, t)}</div>
@@ -359,8 +371,10 @@ def index(lang):
 </div></section>
 
 <section id="{ids["support"]}" class="support"><div class="wrap">
-  <h2>{t["support_h2"]}</h2><p class="sub">{escape(t["support_text"])}</p>
-  <div class="cta">{button(LINKS["coffee"], t["coffee"], True, t)}{button(LINKS["sponsors"], t["sponsors"], False, t)}</div>
+  <h2>{escape(t["support_h2"])}</h2>
+  <p class="sub">{escape(t["support_text"])}</p>
+  <p class="sub">{t["contact_text"]}</p>
+  <div class="cta">{button(LINKS["coffee"], t["coffee"], True, t)}{button(LINKS["sponsors"], t["sponsors"], False, t)}{button(LINKS["email"], t["email_btn"], False, t)}{button(LINKS["issues"], t["issues_btn"], False, t)}</div>
 </div></section>
 """
     return page(t, lang, t["title"], body, t["description"])
