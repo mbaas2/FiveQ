@@ -17,7 +17,7 @@ Die Mac-Bilder (`mac-*.png`) dienen als Vorbild: gleiche Fenstergröße (1180×8
 
 - Repos nebeneinander auschecken: `FiveQ` (dieses Repo) und `FiveQThoughts`.
 - FiveQThoughts installiert (`FiveQThoughts-Setup-x.y.z.exe`) **oder** aus dem Quellcode gestartet (`run_windows.bat`).
-- In der App ist ein funktionierender API-Key hinterlegt (⚙ API). Python 3.9+ für die Skripte.
+- In der App ist ein funktionierender API-Key hinterlegt (⚙ Einstellungen). Python 3.9+ für die Skripte.
 - In den Einstellungen der App **Anzahl angezeigter Karten = 6**.
 - Windows-Anzeige-Skalierung 150 % oder 200 % ergibt schärfere Bilder (wie Retina am Mac).
 
