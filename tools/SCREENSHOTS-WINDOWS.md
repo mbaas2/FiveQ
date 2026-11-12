@@ -53,6 +53,12 @@ Automatisch (Entwurf, auf dem Mac geschrieben und **noch nicht unter Windows get
 powershell -ExecutionPolicy Bypass -File tools\capture_windows.ps1 -Lang de -Backend $B
 ```
 
+**Aus dem Quellcode statt installiert** (z. B. vor einem Release): `-Exe "..\FiveQThoughts\native\windows\bin\Release\FiveQThoughts.exe"`
+übergeben. Achtung: Ungepackt liest die App `FiveQThoughts\config.local.json` im Repo, nicht
+`%APPDATA%\FiveQThoughts\config.local.json` – dort vorher `"language"` auf `de` bzw. `en` und
+`"theme"` auf `auto` setzen (das Design folgt dann der vom Skript umgeschalteten Systemeinstellung).
+Bei einem „timed out“ von TheBrain im Bild das Skript einfach erneut laufen lassen.
+
 Das Skript setzt Sprache/Design über `POST /api/config`, startet die App neu, bringt das Fenster
 auf 1180×840 und nimmt es per `PrintWindow` (inkl. Titelleiste) auf. Falls die App nach dem
 Neustart einen anderen Port wählt oder das Bild schwarz bleibt (WebView2), manuell vorgehen:
