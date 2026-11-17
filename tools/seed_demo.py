@@ -23,22 +23,22 @@ HERE = Path(__file__).resolve().parent
 # Oldest first: the last entry ends up at the top of the list.
 DEMO = {
     "de": [
-        {"markdown": "Zitat für die Präsentation\n\n„Notizen sind Gedanken, die man wiederfinden möchte.“"},
-        {"markdown": "Einkauf Team-Frühstück\n\n• Croissants\n• Obst\n• Hafermilch\n• Kaffeebohnen ☕"},
-        {"markdown": "Buchtipp von Lisa\n\nBuilding a Second Brain – unbedingt das Kapitel zu Progressive Summarization lesen.",
+        {"markdown": "### Zitat für die Präsentation\n\n> „Notizen sind Gedanken, die man **wiederfinden** möchte.“"},
+        {"markdown": "**Einkauf Team-Frühstück**\n\n- Croissants\n- Obst\n- Hafermilch\n- Kaffeebohnen ☕"},
+        {"markdown": "**Buchtipp von Lisa**\n\n*Building a Second Brain* – unbedingt das Kapitel zu **Progressive Summarization** lesen.",
          "links": [{"title": "Building a Second Brain", "url": "https://www.buildingasecondbrain.com"}]},
-        {"markdown": "Whiteboard-Skizze Projektstruktur Q1", "image": True},
-        {"markdown": "Call mit Anna\n\nAngebot bis Mittwoch schicken, Workshop-Termin im Dezember vorschlagen."},
-        {"markdown": "Idee: Wochenrückblick am Freitag\n\nJeden Freitag um 16 Uhr drei Fragen:\n1. Was lief gut?\n2. Was hat gebremst?\n3. Was nehme ich mir vor?"},
+        {"markdown": "**Whiteboard-Skizze** Projektstruktur Q1", "image": True},
+        {"markdown": "**Call mit Anna**\n\nAngebot bis *Mittwoch* schicken, Workshop-Termin im `Q4` vorschlagen."},
+        {"markdown": "### Idee: Wochenrückblick\n\nJeden Freitag um 16 Uhr drei Fragen:\n1. Was lief **gut**?\n2. Was hat gebremst?\n3. Was nehme ich mir vor?"},
     ],
     "en": [
-        {"markdown": "Quote for the presentation\n\n“Notes are thoughts you want to find again.”"},
-        {"markdown": "Team breakfast shopping\n\n• Croissants\n• Fruit\n• Oat milk\n• Coffee beans ☕"},
-        {"markdown": "Book tip from Lisa\n\nBuilding a Second Brain – make sure to read the chapter on Progressive Summarization.",
+        {"markdown": "### Quote for the presentation\n\n> “Notes are thoughts you want to **find again**.”"},
+        {"markdown": "**Team breakfast shopping**\n\n- Croissants\n- Fruit\n- Oat milk\n- Coffee beans ☕"},
+        {"markdown": "**Book tip from Lisa**\n\n*Building a Second Brain* – make sure to read the chapter on **Progressive Summarization**.",
          "links": [{"title": "Building a Second Brain", "url": "https://www.buildingasecondbrain.com"}]},
-        {"markdown": "Whiteboard sketch: project structure Q1", "image": True},
-        {"markdown": "Call with Anna\n\nSend the quote by Wednesday, suggest a workshop date in December."},
-        {"markdown": "Idea: weekly review on Friday\n\nEvery Friday at 4 pm, three questions:\n1. What went well?\n2. What slowed me down?\n3. What's next?"},
+        {"markdown": "**Whiteboard sketch:** project structure Q1", "image": True},
+        {"markdown": "**Call with Anna**\n\nSend the quote by *Wednesday*, suggest a workshop date in `Q4`."},
+        {"markdown": "### Idea: weekly review\n\nEvery Friday at 4 pm, three questions:\n1. What went **well**?\n2. What slowed me down?\n3. What's next?"},
     ],
 }
 
